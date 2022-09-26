@@ -1,0 +1,44 @@
+import java.util.*;
+public class Solution {
+	
+	public static boolean checkMember(int n)
+				
+		
+	{    
+ 		int n1=0,n2=1,n3,i;    
+ 		;//printing 0 and 1    
+    	boolean res=false;
+        if(n==1 || n==0)
+            return true;
+ 		for(i=1;i<=n;++i)//loop starts from 2 because 0 and 1 are already printed    
+ 		{    
+ 	 		n3=n1+n2;  
+            //System.out.println(n3);
+            if(n3==n)
+            {
+                res=true;
+                break;
+            }
+ 			if(n3>n)
+                break;
+            
+ 			 n1=n2;    
+  			n2=n3; 
+            
+ 		}   
+        return res;
+  
+	}
+    public static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(checkMember(n));
+        
+        
+    }
+}
+
+	
+	
+
